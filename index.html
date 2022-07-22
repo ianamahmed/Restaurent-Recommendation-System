@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Restaraunt Recommendation system</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <script
+    type="text/javascript"
+    src="https://code.jquery.com/jquery-1.7.1.min.js"
+  ></script>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div><b>Restaurant Recommendation system</b></div>
+      </header>
+      <div class="main">
+        <form class="form">
+          <legend style="font-size: 18px"><b>Input your details</b></legend>
+          <div>
+            <label for="gender">Gender :</label>
+            <select name="gender" id="gender" required>
+              <option selected value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </div>
+          <div>
+            <label for="age"> Age :</label>
+            <input
+              type="number"
+              placeholder="Enter your Age"
+              id="age"
+              name="age"
+              required
+            />
+          </div>
+          <div>
+            <label for="cusine"> Cusine :</label>
+            <select name="cusine" id="cusine" required>
+              <option selected value="Traditional food">
+                Traditional Food
+              </option>
+              <option value="Western Food">Western Food</option>
+            </select>
+          </div>
+          <div class="price">
+            <label for="price"> Price </label>
+            <input
+              type="range"
+              id="price"
+              name="price"
+              min="600"
+              max="2000"
+              oninput="range_disp.value = price.value"
+            />
+            &nbsp &nbsp
+            <output id="range_disp"></output>
+          </div>
+          <div>
+            <label for="rating"> Rating :</label>
+            <select name="rating" id="rating" required>
+              <option selected value="4">Rating 4+</option>
+              <option value="3">Rating 3+</option>
+              <option value="2">Rating 2+</option>
+              <option value="1">Rating 1+</option>
+            </select>
+          </div>
+          <input
+            type="submit"
+            class="submit"
+            onclick="form_validate()"
+            value="Search"
+          />
+        </form>
+        <div class="restaurant_list">
+          <img class="foodimg" src="images/foodimg.jpg" />
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
